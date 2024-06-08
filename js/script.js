@@ -82,7 +82,7 @@ function convertCountryCode(country) {
 
 // Fetch weather data from OpenWeather API
 function getWeather() {
-	const API_KEY = ''; // Insert API Key here
+	const API_KEY = process.env.OPEN_WEATHER_MAP_API_KEY; 
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=${API_KEY}&units=${units}`)
 		.then(response => response.json())
 		.then(data => {
