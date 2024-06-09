@@ -1,7 +1,3 @@
-// Import the API Key
-import WEATHER_API_KEY from "./apiKey.js";
-//const {WEATHER_API_KEY} = require('./apiKey');
-
 
 // State initialization
 let currentCity = "Kolkata"; // Default city
@@ -87,7 +83,7 @@ function convertCountryCode(country) {
 
 // Fetch weather data from OpenWeather API
 function getWeather() {
-	const API_KEY = WEATHER_API_KEY;
+	const API_KEY = '075bfd2e349651e4b08612ae436e381e';
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=${API_KEY}&units=${units}`)
 		.then(response => response.json())
 		.then(data => {
